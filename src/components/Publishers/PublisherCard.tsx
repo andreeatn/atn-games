@@ -1,8 +1,8 @@
-import Platform from "entities/platforms";
 import PublisherDetails from "./PublisherDetails";
+import Publisher from "entities/publishers";
 
 interface Props {
-  publisher: Platform;
+  publisher: Publisher;
 }
 
 function PublisherCard({ publisher }: Props) {
