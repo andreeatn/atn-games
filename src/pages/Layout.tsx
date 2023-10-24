@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import backgroundImg from "../assets/gradient-bg.jpg";
+import NavBar from "components/NavBar";
+import Footer from "components/Footer";
+import backgroundImg from "assets/gradient-bg.jpg";
 
 function Layout() {
   return (

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/apiClient";
+import apiClient from "services/apiClient";
 
 const useDataDetails = <T>(endpoint:string, data:string, dataId: number) => {
     return useQuery<T, Error>({

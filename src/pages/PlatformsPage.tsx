@@ -1,4 +1,4 @@
-import PlatformsContainer from "../components/Platforms/PlatformsContainer";
+import PlatformsContainer from "components/Platforms/PlatformsContainer";
 
 function PlatformsPage() {
   return (

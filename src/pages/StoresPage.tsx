@@ -1,4 +1,4 @@
-import StoreContainer from "../components/Stores/StoreContainer";
+import StoreContainer from "components/Stores/StoreContainer";
 
 function StoresPage() {
   return (

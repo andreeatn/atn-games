@@ -1,4 +1,4 @@
-import Platform from "../../entities/platforms";
+import Platform from "entities/platforms";
 import PlatformDetails from "./PlatformDetails";
 
 interface Props {

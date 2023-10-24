@@ -1,5 +1,5 @@
-import Store from "../../entities/store";
-import useData from "../../hooks/useData";
+import Store from "entities/store";
+import useData from "hooks/useData";
 import StoreCard from "./StoreCard";
 
 function StoreContainer() {

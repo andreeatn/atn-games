@@ -1,5 +1,5 @@
-import Platform from "../../entities/platforms";
-import useData from "../../hooks/useData";
+import Platform from "entities/platforms";
+import useData from "hooks/useData";
 import PlatformCard from "./PlatformCard";
 
 function PlatformsContainer() {

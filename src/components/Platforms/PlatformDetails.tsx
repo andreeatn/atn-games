@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
-import { PlatformDetailsType } from "../../entities/platforms";
-import useDataDetails from "../../hooks/useDataDetails";
+import { PlatformDetailsType } from "entities/platforms";
+import useDataDetails from "hooks/useDataDetails";
 
 interface Props {
   platformId: number;

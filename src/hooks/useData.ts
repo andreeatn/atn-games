@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../services/apiClient";
-import FetchResponse from "../entities/fetchResponse";
+import apiClient from "services/apiClient";
+import FetchResponse from "entities/fetchResponse";
 
 const useData = <T>(data: string, resultsNo?: number) => {
     return useQuery<FetchResponse<T>, Error>({

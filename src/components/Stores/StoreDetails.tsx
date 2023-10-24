@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import parse from "html-react-parser";
-import useDataDetails from "../../hooks/useDataDetails";
-import { StoreDetailsType } from "../../entities/store";
+import useDataDetails from "hooks/useDataDetails";
+import { StoreDetailsType } from "entities/store";
 
 interface Props {
   storeId: number;
