@@ -88,7 +88,10 @@ function HomeTrendsCards() {
             style={{ height: "25vh", objectFit: "cover" }}
           />
           <div className="card-img-overlay px-0 pt-4">
-            <button className="btn btn-success btn-sm px-4 stretched-link">
+            <button
+              className="btn btn-success btn-sm px-4 stretched-link"
+              onClick={() => navigate("/publishers")}
+            >
               Publishers
             </button>
           </div>

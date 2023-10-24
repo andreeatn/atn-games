@@ -64,9 +64,9 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-white">
+              <Link to={"publishers"} className="nav-link text-white">
                 Publishers
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link text-white">
