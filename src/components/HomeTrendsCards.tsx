@@ -2,8 +2,11 @@ import DevelopersImg from "../assets/ubisoft_logo.jpg";
 import PlatformsImg from "../assets/controller.jpg";
 import PublishersImg from "../assets/ea-logo.webp";
 import StoresImg from "../assets/steam_logo.jpg";
+import { useNavigate } from "react-router-dom";
 
 function HomeTrendsCards() {
+  const navigate = useNavigate();
+
   return (
     <div className="row row-cols-2 row-cols-md-3 g-2">
       <div className="col">
@@ -30,7 +33,10 @@ function HomeTrendsCards() {
             style={{ height: "25vh", objectFit: "cover" }}
           />
           <div className="card-img-overlay px-0 pt-4">
-            <button className="btn btn-success btn-sm px-4 stretched-link">
+            <button
+              className="btn btn-success btn-sm px-4 stretched-link"
+              onClick={() => navigate("/stores")}
+            >
               Stores
             </button>
           </div>

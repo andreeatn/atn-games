@@ -1,19 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
-import { Games } from "../entities/games";
+import Game from "../entities/game";
 import apiClient from "../services/apiClient";
-
- export interface FetchResponse{
-        count: number;
-        next: string | null,
-        previous: string | null,
-        results: Games[]
-}
+import FetchResponse from "../entities/fetchResponse";
 
 const useGames = (platformId?: string, resultsNo?:number, ordering?:string) => {
-    return useQuery<FetchResponse, Error>({
+    return useQuery<FetchResponse<Game>, Error>({
         queryKey: ['games', platformId],
         queryFn: () => 
-            apiClient.get<FetchResponse>('/games',{
+            apiClient.get('/games',{
                 params:{
                     platforms: platformId,
                     page_size: resultsNo,
