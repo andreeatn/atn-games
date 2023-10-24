@@ -1,4 +1,4 @@
-import Store from "../entities/store";
+import Store from "../../entities/store";
 import StoreDetails from "./StoreDetails";
 
 interface Props {

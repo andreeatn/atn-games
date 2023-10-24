@@ -6,7 +6,7 @@ export default interface Store{
     image_background:string
 }
 
-export interface StoreDetails{
+export interface StoreDetailsType{
     id: number,
     slug: string,
     games_count: number,

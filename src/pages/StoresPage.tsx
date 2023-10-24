@@ -1,10 +1,4 @@
-import DevelopersImg from "../assets/ubisoft_logo.jpg";
-import PlatformsImg from "../assets/controller.jpg";
-import PublishersImg from "../assets/ea-logo.webp";
-import StoresImg from "../assets/steam_logo.jpg";
-import StoreDetails from "../components/StoreDetails";
-import StoreCards from "../components/StoreCard";
-import StoreContainer from "../components/StoreContainer";
+import StoreContainer from "../components/Stores/StoreContainer";
 
 function StoresPage() {
   return (
