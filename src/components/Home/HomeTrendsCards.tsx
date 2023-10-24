@@ -1,7 +1,7 @@
-import DevelopersImg from "../assets/ubisoft_logo.jpg";
-import PlatformsImg from "../assets/controller.jpg";
-import PublishersImg from "../assets/ea-logo.webp";
-import StoresImg from "../assets/steam_logo.jpg";
+import DevelopersImg from "assets/ubisoft_logo.jpg";
+import PlatformsImg from "assets/controller.jpg";
+import PublishersImg from "assets/ea-logo.webp";
+import StoresImg from "assets/steam_logo.jpg";
 import { useNavigate } from "react-router-dom";
 
 function HomeTrendsCards() {

@@ -1,5 +1,5 @@
-import HomeGamesByPlatforms from "../components/HomeGamesByPlatforms";
-import HomeTrendsCards from "../components/HomeTrendsCards";
+import HomeGamesByPlatforms from "components/Home/HomeGamesByPlatforms";
+import HomeTrendsCards from "components/Home/HomeTrendsCards";
 
 function HomePage() {
   return (

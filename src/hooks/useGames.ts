@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import Game from "../entities/game";
-import apiClient from "../services/apiClient";
-import FetchResponse from "../entities/fetchResponse";
+import Game from "entities/game";
+import apiClient from "services/apiClient";
+import FetchResponse from "entities/fetchResponse";
 
 const useGames = (platformId?: string, resultsNo?:number, ordering?:string) => {
     return useQuery<FetchResponse<Game>, Error>({
