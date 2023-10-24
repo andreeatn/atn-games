@@ -8,6 +8,7 @@ interface Props {
 function StoreCard({ store }: Props) {
   const collapseId = `collapseDetails${store.slug}`;
   const collapseTarget = "#" + collapseId;
+  const storeLink = `https://${store.domain}`;
 
   return (
     <div className="card bg-dark text-white" key={store.id}>
@@ -19,7 +20,13 @@ function StoreCard({ store }: Props) {
       />
       <div className="card-body mt-2">
         <h5 className="card-title">{store.name}</h5>
-        <h6 className="card-subtitle">{store.domain}</h6>
+        <a
+          href={storeLink}
+          target="#"
+          className="card-subtitle d-block pt-1 pb-2"
+        >
+          {store.domain}
+        </a>
         <button
           className="btn btn-success mt-4"
           data-bs-toggle="collapse"
