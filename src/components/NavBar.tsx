@@ -1,4 +1,5 @@
 import { IoMdMenu, IoIosSearch } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -58,9 +59,9 @@ function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-white">
+              <Link to={"platforms"} className="nav-link text-white">
                 Platforms
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link text-white">
