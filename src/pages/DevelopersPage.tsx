@@ -1,4 +1,4 @@
-import DevelopersCards from "../components/DevelopersCards";
+import DevelopersCards from "components/Developers/DevelopersCards";
 
 function DevelopersPage() {
   return (

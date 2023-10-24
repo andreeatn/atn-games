@@ -1,5 +1,5 @@
-import Developer from "../entities/developer";
-import useData from "../hooks/useData";
+import Developer from "entities/developer";
+import useData from "hooks/useData";
 
 function DevelopersCards() {
   const { data: developers, error } = useData<Developer>("developers", 5);
