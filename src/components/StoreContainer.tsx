@@ -1,8 +1,9 @@
-import useStores from "../hooks/useStores";
+import Store from "../entities/store";
+import useData from "../hooks/useData";
 import StoreCard from "./StoreCard";
 
 function StoreContainer() {
-  const { data: stores, error } = useStores(9);
+  const { data: stores, error } = useData<Store>("stores", 9);
 
   return (
     <div className="accordion" id="accordionParent">
