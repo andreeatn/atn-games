@@ -5,6 +5,7 @@ import StoresPage from "pages/StoresPage";
 import DevelopersPage from "pages/DevelopersPage";
 import PlatformsPage from "pages/PlatformsPage";
 import PublishersPage from "pages/PublishersPage";
+import CreatorsPage from "pages/CreatorsPage";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/developers", element: <DevelopersPage /> },
       { path: "/platforms", element: <PlatformsPage /> },
       { path: "/publishers", element: <PublishersPage /> },
+      { path: "/creators", element: <CreatorsPage /> },
     ],
   },
 ]);
