@@ -4,7 +4,7 @@ export default interface Platform{
     name: string,
     image_background: string,
     games_count: number,
-    games:{id: number, name: string}[]
+    games:{id: number, slug:string, name: string, added: number}[]
 }
 
 export interface PlatformDetailsType{

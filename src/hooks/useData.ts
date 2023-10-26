@@ -3,7 +3,7 @@ import apiClient from "services/apiClient";
 import FetchResponse from "entities/fetchResponse";
 
 const useData = <T>(data: string, resultsNo?: number) => {
-    return useQuery<FetchResponse<T>, Error>({
+       return useQuery<FetchResponse<T>, Error>({
         queryKey:[data],
         queryFn:()=>
             apiClient.get(`/${data}`,{
@@ -12,7 +12,8 @@ const useData = <T>(data: string, resultsNo?: number) => {
             }
         })
             .then(res => res.data)
-            .catch(err => err)
+            .catch(err => err),
+            staleTime: 60 * 60 * 1000, //1 hour
     })
 }
 

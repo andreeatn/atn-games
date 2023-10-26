@@ -54,9 +54,9 @@ function NavBar() {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="#" className="nav-link text-white">
+              <Link to={"games"} className="nav-link text-white">
                 Games
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link to={"platforms"} className="nav-link text-white">

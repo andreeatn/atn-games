@@ -6,6 +6,7 @@ import DevelopersPage from "pages/DevelopersPage";
 import PlatformsPage from "pages/PlatformsPage";
 import PublishersPage from "pages/PublishersPage";
 import CreatorsPage from "pages/CreatorsPage";
+import GamesPage from "pages/GamesPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "", element: <HomePage /> },
+      { path: "/games", element: <GamesPage /> },
       { path: "/stores", element: <StoresPage /> },
       { path: "/developers", element: <DevelopersPage /> },
       { path: "/platforms", element: <PlatformsPage /> },

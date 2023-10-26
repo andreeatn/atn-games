@@ -1,3 +1,4 @@
+import GameQuery from "entities/gameQuery";
 import useGames from "hooks/useGames";
 
 interface Props {
@@ -7,10 +8,14 @@ interface Props {
 }
 
 function HomeGamesByPlatforms({ platformId, platformName, ordering }: Props) {
+  const gameQuery: GameQuery = {
+    platformId: platformId,
+    ordering: ordering,
+    resultsNo: 6,
+  };
   const carouselId = `carousel${platformName}GamesControls`;
   const btnTarget = "#" + carouselId;
-  const resultsNo = 6;
-  const { data: games, error } = useGames(platformId, resultsNo, ordering);
+  const { data: games, error } = useGames(gameQuery);
   const carouselItem1 = games?.results.filter((game, index) => index < 2);
   const carouselItem2 = games?.results.filter(
     (game, index) => index > 1 && index < 4
