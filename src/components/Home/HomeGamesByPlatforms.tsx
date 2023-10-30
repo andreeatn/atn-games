@@ -1,5 +1,6 @@
 import GameQuery from "entities/gameQuery";
 import useGames from "hooks/useGames";
+import { Link } from "react-router-dom";
 
 interface Props {
   platformId: string;
@@ -45,7 +46,13 @@ function HomeGamesByPlatforms({ platformId, platformName, ordering }: Props) {
                   />
                   <div className="card-body text-white">
                     <h5 className="card-title">{item.name}</h5>
-                    <a href="#" className="stretched-link"></a>
+                    <Link
+                      to={`/games/${item.id}`}
+                      className="stretched-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    ></Link>
                   </div>
                 </div>
               </div>
@@ -65,7 +72,13 @@ function HomeGamesByPlatforms({ platformId, platformName, ordering }: Props) {
                   />
                   <div className="card-body text-white">
                     <h5 className="card-title">{item.name}</h5>
-                    <a href="#" className="stretched-link"></a>
+                    <Link
+                      to={`/games/${item.id}`}
+                      className="stretched-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    ></Link>
                   </div>
                 </div>
               </div>
@@ -85,7 +98,13 @@ function HomeGamesByPlatforms({ platformId, platformName, ordering }: Props) {
                   />
                   <div className="card-body text-white">
                     <h5 className="card-title">{item.name}</h5>
-                    <a href="#" className="stretched-link"></a>
+                    <Link
+                      to={`/games/${item.id}`}
+                      className="stretched-link"
+                      onClick={() => {
+                        window.scroll(0, 0);
+                      }}
+                    ></Link>{" "}
                   </div>
                 </div>
               </div>

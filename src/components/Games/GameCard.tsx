@@ -1,5 +1,6 @@
 import Game from "entities/game";
 import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 interface Props {
   game: Game;
@@ -21,6 +22,13 @@ function GameCard({ game }: Props) {
             <AiFillStar className="me-1" style={{ color: "yellow" }} />
             {game.rating}
           </p>
+          <Link
+            to={`/games/${game.id}`}
+            className="stretched-link"
+            onClick={() => {
+              window.scroll(0, 0);
+            }}
+          ></Link>
         </div>
       </div>
     </>

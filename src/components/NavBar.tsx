@@ -3,14 +3,20 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-md fixed-top navbar-dark bg-success ">
+    <nav
+      id="siteNavBar"
+      className="navbar navbar-expand-md fixed-top navbar-dark bg-success "
+    >
       <div className="container">
-        <a
-          href="/"
+        <Link
+          to={"/"}
           className="navbar-brand fs-3 fw-bold font-monospace px-3 text-info"
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
         >
           ATN Games
-        </a>
+        </Link>
 
         <div className="d-flex justify-content-end">
           <button
@@ -54,22 +60,46 @@ function NavBar() {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to={"games"} className="nav-link text-white">
+              <Link
+                to={"games"}
+                className="nav-link text-white"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
                 Games
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"platforms"} className="nav-link text-white">
+              <Link
+                to={"platforms"}
+                className="nav-link text-white"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
                 Platforms
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"publishers"} className="nav-link text-white">
+              <Link
+                to={"publishers"}
+                className="nav-link text-white"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
                 Publishers
               </Link>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link text-white">
+              <a
+                href="#"
+                className="nav-link text-white"
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+              >
                 Contact
               </a>
             </li>
