@@ -16,16 +16,16 @@ function PublisherCard({ publisher }: Props) {
           <div className="col-md-4">
             <img
               src={publisher.image_background}
-              alt="Developer cover"
+              alt="Publisher cover"
               className="card-img"
               style={{ height: "25vh", objectFit: "cover" }}
             />
           </div>
           <div className="col-md-4">
             <div className="card-body px-3">
-              <h5 className="card-title">{publisher.name}</h5>
+              <h5 className="card-title mb-0 mb-md-2">{publisher.name}</h5>
               <button
-                className="btn btn-success"
+                className="btn btn-success d-none d-md-inline-block"
                 data-bs-toggle="collapse"
                 data-bs-target={collapseTarget}
                 aria-expanded="false"
@@ -43,6 +43,15 @@ function PublisherCard({ publisher }: Props) {
                   <li key={game.id}>{game.name}</li>
                 ))}
               </ol>
+              <button
+                className="btn btn-success my-2 d-inline-block d-md-none"
+                data-bs-toggle="collapse"
+                data-bs-target={collapseTarget}
+                aria-expanded="false"
+                aria-controls={collapseId}
+              >
+                Show more details
+              </button>
             </div>
           </div>
         </div>

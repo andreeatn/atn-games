@@ -16,7 +16,7 @@ function CreatorCard({ creator }: Props) {
           <div className="col-md-4 d-flex flex-column">
             <img
               src={creator.image}
-              alt="Developer cover"
+              alt="Creator cover"
               className="card-img"
               style={{ height: "25vh", objectFit: "cover" }}
             />

@@ -16,16 +16,16 @@ function PlatformCard({ platform }: Props) {
           <div className="col-md-4">
             <img
               src={platform.image_background}
-              alt="Developer cover"
+              alt="Platform cover"
               className="card-img"
               style={{ height: "25vh", objectFit: "cover" }}
             />
           </div>
           <div className="col-md-4">
             <div className="card-body px-3">
-              <h5 className="card-title">{platform.name}</h5>
+              <h5 className="card-title mb-0  mb-md-2">{platform.name}</h5>
               <button
-                className="btn btn-success"
+                className="btn btn-success d-none d-md-inline-block"
                 data-bs-toggle="collapse"
                 data-bs-target={collapseTarget}
                 aria-expanded="false"
@@ -43,6 +43,15 @@ function PlatformCard({ platform }: Props) {
                   <li key={game.id}>{game.name}</li>
                 ))}
               </ol>
+              <button
+                className="btn btn-success my-2 d-inline-block d-md-none"
+                data-bs-toggle="collapse"
+                data-bs-target={collapseTarget}
+                aria-expanded="false"
+                aria-controls={collapseId}
+              >
+                Show more details
+              </button>
             </div>
           </div>
         </div>

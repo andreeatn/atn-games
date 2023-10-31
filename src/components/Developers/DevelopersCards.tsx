@@ -1,11 +1,21 @@
 import Developer from "entities/developer";
 import useData from "hooks/useData";
+import DevelopersCardSkeleton from "./DevelopersCardSkeleton";
 
 function DevelopersCards() {
-  const { data: developers, error } = useData<Developer>("developers", 5);
+  const {
+    data: developers,
+    error,
+    isLoading,
+  } = useData<Developer>("developers", 5);
+  const placeholders = [...Array(3)];
 
   return (
     <>
+      {isLoading &&
+        placeholders.map((placeholder, index) => (
+          <DevelopersCardSkeleton key={index} />
+        ))}
       {developers?.results.map((dev) => (
         <div className="card bg-dark text-white my-5" key={dev.id}>
           <div className="row g-0">
