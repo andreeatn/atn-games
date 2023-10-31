@@ -11,6 +11,7 @@ import GameDetailsPage from "pages/GameDetailsPage";
 import SupportPage from "pages/SupportPage";
 import PrivacyPolicyPage from "pages/PrivacyPolicyPage";
 import TermsOfUsePage from "pages/TermsOfUsePage";
+import ErrorPage from "pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
       { path: "/terms-of-use", element: <TermsOfUsePage /> },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 
