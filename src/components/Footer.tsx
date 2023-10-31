@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <div className="container d-flex flex-column flex-md-row justify-content-between">
@@ -14,9 +16,13 @@ function Footer() {
           </a>
         </li>
         <li className="footer-menu-item ms-3">
-          <a href="" className="nav-link text-white">
-            Contact
-          </a>
+          <Link
+            to={"/support"}
+            className="nav-link text-white"
+            onClick={() => window.scroll(0, 0)}
+          >
+            Support
+          </Link>
         </li>
       </ul>
     </div>

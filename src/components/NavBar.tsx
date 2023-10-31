@@ -93,15 +93,15 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="#"
+              <Link
+                to={"/support"}
                 className="nav-link text-white"
                 onClick={() => {
                   window.scroll(0, 0);
                 }}
               >
-                Contact
-              </a>
+                Support
+              </Link>
             </li>
           </ul>
         </div>
