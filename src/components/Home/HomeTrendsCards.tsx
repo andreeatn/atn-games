@@ -1,11 +1,15 @@
+import { useContext } from "react";
 import DevelopersImg from "assets/ubisoft_logo.jpg";
 import PlatformsImg from "assets/controller.jpg";
 import PublishersImg from "assets/ea-logo.webp";
 import StoresImg from "assets/steam_logo.jpg";
 import { useNavigate } from "react-router-dom";
+import GameQueryContext from "context/gameQueryContext";
+import GameQuery from "entities/gameQuery";
 
 function HomeTrendsCards() {
   const navigate = useNavigate();
+  const { setGameQuery } = useContext(GameQueryContext);
 
   return (
     <div className="row row-cols-2 row-cols-md-3 g-2">
@@ -20,7 +24,11 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/games")}
+              onClick={() => {
+                setGameQuery({} as GameQuery);
+                navigate("/games");
+                window.scroll(0, 0);
+              }}
             >
               Games
             </button>
@@ -38,7 +46,10 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/stores")}
+              onClick={() => {
+                navigate("/stores");
+                window.scroll(0, 0);
+              }}
             >
               Stores
             </button>
@@ -57,7 +68,10 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/developers")}
+              onClick={() => {
+                navigate("/developers");
+                window.scroll(0, 0);
+              }}
             >
               Developers
             </button>
@@ -75,7 +89,10 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/platforms")}
+              onClick={() => {
+                navigate("/platforms");
+                window.scroll(0, 0);
+              }}
             >
               Platforms
             </button>
@@ -93,7 +110,10 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/publishers")}
+              onClick={() => {
+                navigate("/publishers");
+                window.scroll(0, 0);
+              }}
             >
               Publishers
             </button>
@@ -111,7 +131,10 @@ function HomeTrendsCards() {
           <div className="card-img-overlay px-0 pt-4">
             <button
               className="btn btn-success btn-sm px-4 stretched-link"
-              onClick={() => navigate("/creators")}
+              onClick={() => {
+                navigate("/creators");
+                window.scroll(0, 0);
+              }}
             >
               Creators
             </button>

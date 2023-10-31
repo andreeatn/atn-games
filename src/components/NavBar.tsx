@@ -88,6 +88,7 @@ function NavBar() {
                 to={"games"}
                 className="nav-link text-white"
                 onClick={() => {
+                  setGameQuery({} as GameQuery);
                   window.scroll(0, 0);
                 }}
               >
