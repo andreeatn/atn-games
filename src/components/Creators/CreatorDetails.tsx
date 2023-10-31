@@ -38,9 +38,9 @@ function CreatorDetails({ creatorId }: Props) {
                 <div className="col-1 px-3 ps-md-5 pe-md-4">{rating}</div>
                 <div className="col-10 col-md-8">
                   <div className="progress">
-                    {data?.ratings.filter((d) => d.id === rating) &&
+                    {data?.ratings?.filter((d) => d.id === rating) &&
                       data?.ratings
-                        .filter((d) => d.id === rating)
+                        ?.filter((d) => d.id === rating)
                         .map((d) => (
                           <span
                             className="progress-bar bg-success"
