@@ -10,7 +10,7 @@ function CreatorCardSkeleton() {
           <div className="col-md-4 d-flex flex-column">
             <img
               src={ImgPlaceholder}
-              alt="Placeholder for creator image"
+              alt="Placeholder for creator thumbnail"
               className="card-img"
               style={{ height: "25vh", objectFit: "cover" }}
             />

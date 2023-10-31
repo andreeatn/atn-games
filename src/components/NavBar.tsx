@@ -1,8 +1,8 @@
 import GameQueryContext from "context/gameQueryContext";
 import GameQuery from "entities/gameQuery";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { FieldValues, useForm } from "react-hook-form";
-import { IoMdMenu, IoIosSearch } from "react-icons/io";
+import { IoIosSearch, IoMdMenu } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {

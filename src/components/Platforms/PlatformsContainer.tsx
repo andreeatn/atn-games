@@ -4,11 +4,7 @@ import PlatformCard from "./PlatformCard";
 import PlatformCardSkeleton from "./PlatformCardSkeleton";
 
 function PlatformsContainer() {
-  const {
-    data: platforms,
-    error,
-    isLoading,
-  } = useData<Platform>("platforms", 5);
+  const { data: platforms, isLoading } = useData<Platform>("platforms", 5);
   const placeholders = [...Array(3)];
 
   return (

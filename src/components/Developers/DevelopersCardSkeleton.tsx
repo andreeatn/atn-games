@@ -10,7 +10,7 @@ function DevelopersCardSkeleton() {
           <div className="col-md-4">
             <img
               src={ImgPlaceholder}
-              alt="Placeholder for developer image"
+              alt="Placeholder for developer cover"
               className="card-img"
               style={{ height: "25vh", objectFit: "cover" }}
             />

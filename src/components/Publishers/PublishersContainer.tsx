@@ -4,11 +4,7 @@ import PublisherCard from "./PublisherCard";
 import PublisherCardSkeleton from "./PublisherCardSkeleton";
 
 function PublisherContainer() {
-  const {
-    data: publishers,
-    error,
-    isLoading,
-  } = useData<Publisher>("publishers", 5);
+  const { data: publishers, isLoading } = useData<Publisher>("publishers", 5);
   const placeholders = [...Array(3)];
 
   return (

@@ -7,7 +7,7 @@ interface Props {
 }
 
 function CreatorDetails({ creatorId }: Props) {
-  const { data, error } = useDataDetails<CreatorDetailsType>(
+  const { data } = useDataDetails<CreatorDetailsType>(
     "creators",
     "creator",
     creatorId

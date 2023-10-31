@@ -24,7 +24,7 @@ function HomeGamesByPlatforms({
   };
   const carouselId = `carousel${platformName}GamesControls`;
   const btnTarget = "#" + carouselId;
-  const { data: games, error } = useGames(queryObj);
+  const { data: games } = useGames(queryObj);
   const carouselItem1 = games?.results.filter((game, index) => index < 2);
   const carouselItem2 = games?.results.filter(
     (game, index) => index > 1 && index < 4

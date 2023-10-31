@@ -6,7 +6,7 @@ function StoreCardSkeleton() {
       <div className="card bg-dark text-white">
         <img
           src={ImgPlaceholder}
-          alt="Placeholder for store image"
+          alt="Placeholder for store cover"
           className="card-img m-0"
           style={{ height: "25vh", objectFit: "cover" }}
         />
@@ -17,11 +17,7 @@ function StoreCardSkeleton() {
           <h6 className="card-subtitle placeholder-glow">
             <span className="placeholder col-6"></span>
           </h6>
-          <a
-            href="#"
-            tabIndex={-1}
-            className="btn btn-success disabled placeholder col-4 my-2"
-          ></a>
+          <button className="btn btn-success disabled placeholder col-4 my-2"></button>
         </div>
       </div>
     </>

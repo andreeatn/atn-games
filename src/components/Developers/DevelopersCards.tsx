@@ -3,11 +3,7 @@ import useData from "hooks/useData";
 import DevelopersCardSkeleton from "./DevelopersCardSkeleton";
 
 function DevelopersCards() {
-  const {
-    data: developers,
-    error,
-    isLoading,
-  } = useData<Developer>("developers", 5);
+  const { data: developers, isLoading } = useData<Developer>("developers", 5);
   const placeholders = [...Array(3)];
 
   return (

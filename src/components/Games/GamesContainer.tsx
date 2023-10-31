@@ -19,8 +19,9 @@ function GamesContainer() {
     });
   }, [gameQuery]);
 
-  const { data, error, isLoading, hasNextPage, fetchNextPage } =
-    useInfiniteGames({ ...queryObj });
+  const { data, isLoading, hasNextPage, fetchNextPage } = useInfiniteGames({
+    ...queryObj,
+  });
 
   return (
     <>
