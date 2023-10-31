@@ -4,5 +4,6 @@ export default interface GameQuery{
     platformId?: string,
     platformName?:string,
     ordering?: string,
+    search?:string,
     resultsNo: number
 }

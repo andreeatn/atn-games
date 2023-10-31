@@ -36,6 +36,14 @@ function GamesShowSelectedQuery() {
                 </p>
               </div>
             )}
+            {gameQuery.search && (
+              <div className="searchTerms">
+                <p className="px-3">
+                  Search Terms:{" "}
+                  <span className="badge bg-info">{gameQuery.search}</span>
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>

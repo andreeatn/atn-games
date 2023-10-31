@@ -13,11 +13,14 @@ function GamesContainer() {
   const cardSkeletons = [...Array(8)];
 
   useEffect(() => {
-    setQueryObj({ ...gameQuery, resultsNo: defaultResultNo });
+    setQueryObj({
+      ...gameQuery,
+      resultsNo: defaultResultNo,
+    });
   }, [gameQuery]);
 
   const { data, error, isLoading, hasNextPage, fetchNextPage } =
-    useInfiniteGames(queryObj);
+    useInfiniteGames({ ...queryObj });
 
   return (
     <>

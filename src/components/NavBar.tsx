@@ -1,7 +1,28 @@
+import GameQueryContext from "context/gameQueryContext";
+import GameQuery from "entities/gameQuery";
+import { useContext, useEffect, useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 import { IoMdMenu, IoIosSearch } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+  const { gameQuery, setGameQuery } = useContext(GameQueryContext);
+  const onSearchSubmit = (data: FieldValues) => {
+    setGameQuery({
+      ...gameQuery,
+      genreId: undefined,
+      genreName: undefined,
+      platformId: undefined,
+      platformName: undefined,
+      ordering: undefined,
+      search: data.search,
+    } as GameQuery);
+    navigate("/games");
+    window.scroll(0, 0);
+  };
+
   return (
     <nav
       id="siteNavBar"
@@ -47,12 +68,15 @@ function NavBar() {
           </button>
         </div>
         <div className="navbar-collapse collapse" id="navbarSearch">
-          <input
-            type="search"
-            className="form-control my-2 my-md-1"
-            placeholder="Search"
-            aria-label="Search"
-          />
+          <form onSubmit={handleSubmit(onSearchSubmit)}>
+            <input
+              type="search"
+              className="form-control my-2 my-md-1"
+              placeholder="Search games"
+              aria-label="Search"
+              {...register("search")}
+            />
+          </form>
         </div>
         <div
           className="collapse navbar-collapse d-md-flex justify-content-md-end"

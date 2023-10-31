@@ -13,7 +13,8 @@ const useGames = (queryObj: GameQuery) => {
                     genres: queryObj.genreId,
                     platforms: queryObj.platformId,
                     page_size: queryObj.resultsNo,
-                    ordering: queryObj.ordering
+                    ordering: queryObj.ordering,
+                    search: queryObj.search
             }
         })
             .then(res => res.data)
@@ -31,6 +32,7 @@ export const useInfiniteGames = (queryObj: GameQuery) => {
                     genres: queryObj.genreId,
                     platforms: queryObj.platformId,
                     ordering: queryObj.ordering,
+                    search: queryObj.search,
                     page: pageParam,  
                     page_size: queryObj.resultsNo,
             }
