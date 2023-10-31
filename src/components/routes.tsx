@@ -9,6 +9,8 @@ import CreatorsPage from "pages/CreatorsPage";
 import GamesPage from "pages/GamesPage";
 import GameDetailsPage from "pages/GameDetailsPage";
 import SupportPage from "pages/SupportPage";
+import PrivacyPolicyPage from "pages/PrivacyPolicyPage";
+import TermsOfUsePage from "pages/TermsOfUsePage";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,8 @@ const router = createBrowserRouter([
       { path: "/publishers", element: <PublishersPage /> },
       { path: "/creators", element: <CreatorsPage /> },
       { path: "/support", element: <SupportPage /> },
+      { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
+      { path: "/terms-of-use", element: <TermsOfUsePage /> },
     ],
   },
 ]);
